@@ -1,0 +1,21 @@
+# Mac system files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Raw dataset (skip if not needed on GitHub)
+Breast_cancer_dataset.csv
+
+# Personal reference files
+pandas-cheat-sheet.md.html
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+.env/
