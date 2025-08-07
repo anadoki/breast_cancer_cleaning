@@ -19,3 +19,5 @@ venv/
 env/
 .venv/
 .env/
+venv/
+*.ipynb_checkpoints/

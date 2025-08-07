@@ -1,32 +1,62 @@
-# Breast Cancer Dataset – Cleaning & EDA
+# Breast Cancer Dataset – Cleaning and Exploratory Data Analysis
 
->This is a small practice project where I worked through the process of cleaning and exploring the Breast Cancer dataset.
->
->The goal wasn’t to build a model here, but to really get comfortable with Pandas, data profiling, and understanding what’s inside a dataset before doing anything else with it.
+This is a small practice project where I worked through the process of cleaning and exploring the Breast Cancer dataset from Kaggle.
+
+Dataset link: https://www.kaggle.com/datasets/wasiqaliyasir/breast-cancer-dataset
+
+The goal was not to build a machine learning model, but to get comfortable with pandas, data profiling, and understanding the structure of a dataset before doing anything else with it.
+
+## Tools Used
+
+- Python (3.11)
+- Jupyter Lab
+- Virtual Environment (venv)
+- pandas, numpy
+- matplotlib, seaborn
+
 ## Process
-- Created a virtual environment to install numpy,pandas,matplotlib
-- Loaded and inspected the dataset in Jupyter Lab
-- Looked at the first few rows, checked the shape, and reviewed column names and data types.
-- Cleaned up the structure
-- Renamed columns so they’re consistent (lowercase, underscores instead of spaces).
-- Dropped a completely empty column that had no use.
-- Checked for missing values
-- Confirmed there were none to worry about.
-- Profiled numeric features
-- Wrote a loop to calculate min, quartiles, median, max, and detect outliers using the IQR method.
-- Created an outlier summary table showing how “outlier‑heavy” each feature is.
-- Explored with visuals
-- Made boxplots and histograms for a few columns to see distributions and confirm what the summary table showed.
-- Encoded the target variable
-- Mapped diagnosis from M/B to 1/0 for easier numeric work later.
-- Saved the results
-- Exported a cleaned dataset (breast_cancer_clean.csv)
-- Saved my outlier summary (outlier_summary.csv)
-## Files in this repo
-**breast_cancer_cleaning.ipynb** – the notebook with all steps, from loading to saving.
-**breast_cancer_clean.csv** – cleaned version of the dataset.
-**outlier_summary.csv** – outlier profile for all numeric columns.
-**README.md** – this file!
-## Why I did this
-This is my first practice project with Pandas and data analysis in general. I wanted a hands‑on way to practice with Pandas and data cleaning and profiling. Learnt about boxplots as well. 
+
+### Data Setup
+
+- Created a virtual environment and installed required libraries
+- Loaded the dataset in Jupyter Lab
+- Inspected the first few rows, shape, column names, and data types
+
+### Data Cleaning
+
+- Renamed columns to lowercase with underscores
+- Dropped unnecessary columns like `id`
+- Checked for missing values and confirmed there were none
+
+### Feature Profiling
+
+- Wrote a loop to calculate min, quartiles, median, max for each numeric feature
+- Detected outliers using the IQR method
+- Created an outlier summary table showing how many outliers each feature contains
+
+### Visual Exploration
+
+- Created histograms to understand the distribution of key features
+- Used boxplots grouped by diagnosis to see how features differ between benign and malignant tumors
+- Generated a correlation heatmap to check for highly correlated features
+
+### Target Variable Encoding
+
+- Mapped the `diagnosis` column from M/B to 1/0 for future modeling
+
+### Output
+
+- Exported a cleaned version of the dataset (`breast_cancer_clean.csv`)
+- Saved the outlier summary table as `outlier_summary.csv`
+
+## Files in This Repository
+
+- `breast_cancer_cleaning.ipynb`: Notebook with all steps from loading to exporting
+- `breast_cancer_clean.csv`: Cleaned dataset
+- `outlier_summary.csv`: Outlier profile of numeric features
+- `README.md`: Project summary
+
+## Why I Did This
+
+This was my first hands-on project using pandas and data analysis techniques. I wanted to practice loading and inspecting data, cleaning it properly, profiling features, and building visual understanding through EDA. This project helped me understand how to structure an analysis and document each step clearly.
 
